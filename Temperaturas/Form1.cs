@@ -41,5 +41,43 @@ namespace Temperaturas
                     break;
             }
         }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            switch (cmbCelsius.SelectedIndex)
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                default:
+                    Ingresar();
+                    return;
+            }
+            switch (cmbFahrenheit.SelectedIndex)
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                default:
+                    Ingresar();
+                    return;
+            }
+            switch (cmbKelvin.SelectedIndex)
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                default:
+                    Ingresar();
+                    return;
+            }
+        }
+        private void Ingresar()
+        {
+            MessageBox.Show("Debe seleccionar una opcion antes de continuar");
+        }
     }
 }

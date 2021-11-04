@@ -31,23 +31,25 @@ namespace Temperaturas
         {
             this.CmbMedidas = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblInformacion2 = new System.Windows.Forms.Label();
-            this.pnlCelsius = new System.Windows.Forms.Panel();
-            this.pnlKelvin = new System.Windows.Forms.Panel();
-            this.cmbKelvin = new System.Windows.Forms.ComboBox();
-            this.cmbCelsius = new System.Windows.Forms.ComboBox();
             this.pnlFahrenheit = new System.Windows.Forms.Panel();
             this.cmbFahrenheit = new System.Windows.Forms.ComboBox();
+            this.pnlKelvin = new System.Windows.Forms.Panel();
+            this.cmbKelvin = new System.Windows.Forms.ComboBox();
+            this.lblInformacion2 = new System.Windows.Forms.Label();
             this.lblInformacion = new System.Windows.Forms.Label();
+            this.pnlCelsius = new System.Windows.Forms.Panel();
+            this.cmbCelsius = new System.Windows.Forms.ComboBox();
             this.pnlDatos = new System.Windows.Forms.Panel();
-            this.txtMedidas = new System.Windows.Forms.TextBox();
             this.dgbHistorial = new System.Windows.Forms.DataGridView();
+            this.nudDatos = new System.Windows.Forms.NumericUpDown();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.pnlCelsius.SuspendLayout();
-            this.pnlKelvin.SuspendLayout();
             this.pnlFahrenheit.SuspendLayout();
+            this.pnlKelvin.SuspendLayout();
+            this.pnlCelsius.SuspendLayout();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbHistorial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // CmbMedidas
@@ -66,6 +68,7 @@ namespace Temperaturas
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCalcular);
             this.groupBox1.Controls.Add(this.pnlFahrenheit);
             this.groupBox1.Controls.Add(this.pnlKelvin);
             this.groupBox1.Controls.Add(this.lblInformacion2);
@@ -79,58 +82,6 @@ namespace Temperaturas
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // lblInformacion2
-            // 
-            this.lblInformacion2.AutoSize = true;
-            this.lblInformacion2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacion2.Location = new System.Drawing.Point(6, 104);
-            this.lblInformacion2.Name = "lblInformacion2";
-            this.lblInformacion2.Size = new System.Drawing.Size(172, 16);
-            this.lblInformacion2.TabIndex = 3;
-            this.lblInformacion2.Text = "Seleccione la medida a transformar";
-            // 
-            // pnlCelsius
-            // 
-            this.pnlCelsius.Controls.Add(this.cmbCelsius);
-            this.pnlCelsius.Location = new System.Drawing.Point(184, 104);
-            this.pnlCelsius.Name = "pnlCelsius";
-            this.pnlCelsius.Size = new System.Drawing.Size(126, 31);
-            this.pnlCelsius.TabIndex = 2;
-            this.pnlCelsius.Visible = false;
-            // 
-            // pnlKelvin
-            // 
-            this.pnlKelvin.Controls.Add(this.cmbKelvin);
-            this.pnlKelvin.Location = new System.Drawing.Point(184, 104);
-            this.pnlKelvin.Name = "pnlKelvin";
-            this.pnlKelvin.Size = new System.Drawing.Size(126, 31);
-            this.pnlKelvin.TabIndex = 4;
-            this.pnlKelvin.Visible = false;
-            // 
-            // cmbKelvin
-            // 
-            this.cmbKelvin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKelvin.FormattingEnabled = true;
-            this.cmbKelvin.Items.AddRange(new object[] {
-            "Celsius",
-            "Fahrenheit"});
-            this.cmbKelvin.Location = new System.Drawing.Point(0, 3);
-            this.cmbKelvin.Name = "cmbKelvin";
-            this.cmbKelvin.Size = new System.Drawing.Size(121, 21);
-            this.cmbKelvin.TabIndex = 0;
-            // 
-            // cmbCelsius
-            // 
-            this.cmbCelsius.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCelsius.FormattingEnabled = true;
-            this.cmbCelsius.Items.AddRange(new object[] {
-            "Fahrenheit",
-            "Kelvin"});
-            this.cmbCelsius.Location = new System.Drawing.Point(0, 3);
-            this.cmbCelsius.Name = "cmbCelsius";
-            this.cmbCelsius.Size = new System.Drawing.Size(121, 21);
-            this.cmbCelsius.TabIndex = 0;
             // 
             // pnlFahrenheit
             // 
@@ -153,6 +104,37 @@ namespace Temperaturas
             this.cmbFahrenheit.Size = new System.Drawing.Size(121, 21);
             this.cmbFahrenheit.TabIndex = 0;
             // 
+            // pnlKelvin
+            // 
+            this.pnlKelvin.Controls.Add(this.cmbKelvin);
+            this.pnlKelvin.Location = new System.Drawing.Point(184, 104);
+            this.pnlKelvin.Name = "pnlKelvin";
+            this.pnlKelvin.Size = new System.Drawing.Size(126, 31);
+            this.pnlKelvin.TabIndex = 4;
+            this.pnlKelvin.Visible = false;
+            // 
+            // cmbKelvin
+            // 
+            this.cmbKelvin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKelvin.FormattingEnabled = true;
+            this.cmbKelvin.Items.AddRange(new object[] {
+            "Celsius",
+            "Fahrenheit"});
+            this.cmbKelvin.Location = new System.Drawing.Point(0, 3);
+            this.cmbKelvin.Name = "cmbKelvin";
+            this.cmbKelvin.Size = new System.Drawing.Size(121, 21);
+            this.cmbKelvin.TabIndex = 0;
+            // 
+            // lblInformacion2
+            // 
+            this.lblInformacion2.AutoSize = true;
+            this.lblInformacion2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformacion2.Location = new System.Drawing.Point(6, 104);
+            this.lblInformacion2.Name = "lblInformacion2";
+            this.lblInformacion2.Size = new System.Drawing.Size(172, 16);
+            this.lblInformacion2.TabIndex = 3;
+            this.lblInformacion2.Text = "Seleccione la medida a transformar";
+            // 
             // lblInformacion
             // 
             this.lblInformacion.AutoSize = true;
@@ -163,21 +145,35 @@ namespace Temperaturas
             this.lblInformacion.TabIndex = 2;
             this.lblInformacion.Text = "Seleccione la medida a utilizar:";
             // 
+            // pnlCelsius
+            // 
+            this.pnlCelsius.Controls.Add(this.cmbCelsius);
+            this.pnlCelsius.Location = new System.Drawing.Point(184, 104);
+            this.pnlCelsius.Name = "pnlCelsius";
+            this.pnlCelsius.Size = new System.Drawing.Size(126, 31);
+            this.pnlCelsius.TabIndex = 2;
+            this.pnlCelsius.Visible = false;
+            // 
+            // cmbCelsius
+            // 
+            this.cmbCelsius.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCelsius.FormattingEnabled = true;
+            this.cmbCelsius.Items.AddRange(new object[] {
+            "Fahrenheit",
+            "Kelvin"});
+            this.cmbCelsius.Location = new System.Drawing.Point(0, 3);
+            this.cmbCelsius.Name = "cmbCelsius";
+            this.cmbCelsius.Size = new System.Drawing.Size(121, 21);
+            this.cmbCelsius.TabIndex = 0;
+            // 
             // pnlDatos
             // 
-            this.pnlDatos.Controls.Add(this.txtMedidas);
+            this.pnlDatos.Controls.Add(this.nudDatos);
             this.pnlDatos.Location = new System.Drawing.Point(184, 42);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(109, 35);
+            this.pnlDatos.Size = new System.Drawing.Size(121, 32);
             this.pnlDatos.TabIndex = 2;
             this.pnlDatos.Visible = false;
-            // 
-            // txtMedidas
-            // 
-            this.txtMedidas.Location = new System.Drawing.Point(0, 3);
-            this.txtMedidas.Name = "txtMedidas";
-            this.txtMedidas.Size = new System.Drawing.Size(100, 20);
-            this.txtMedidas.TabIndex = 2;
             // 
             // dgbHistorial
             // 
@@ -186,6 +182,33 @@ namespace Temperaturas
             this.dgbHistorial.Name = "dgbHistorial";
             this.dgbHistorial.Size = new System.Drawing.Size(240, 150);
             this.dgbHistorial.TabIndex = 2;
+            // 
+            // nudDatos
+            // 
+            this.nudDatos.Location = new System.Drawing.Point(1, 0);
+            this.nudDatos.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudDatos.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.nudDatos.Name = "nudDatos";
+            this.nudDatos.Size = new System.Drawing.Size(120, 20);
+            this.nudDatos.TabIndex = 0;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(103, 188);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 5;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // Form1
             // 
@@ -198,12 +221,12 @@ namespace Temperaturas
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.pnlCelsius.ResumeLayout(false);
-            this.pnlKelvin.ResumeLayout(false);
             this.pnlFahrenheit.ResumeLayout(false);
+            this.pnlKelvin.ResumeLayout(false);
+            this.pnlCelsius.ResumeLayout(false);
             this.pnlDatos.ResumeLayout(false);
-            this.pnlDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbHistorial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,7 +235,6 @@ namespace Temperaturas
 
         private System.Windows.Forms.ComboBox CmbMedidas;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtMedidas;
         private System.Windows.Forms.Panel pnlDatos;
         private System.Windows.Forms.Label lblInformacion;
         private System.Windows.Forms.Panel pnlCelsius;
@@ -223,6 +245,8 @@ namespace Temperaturas
         private System.Windows.Forms.ComboBox cmbKelvin;
         private System.Windows.Forms.Label lblInformacion2;
         private System.Windows.Forms.DataGridView dgbHistorial;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.NumericUpDown nudDatos;
     }
 }
 

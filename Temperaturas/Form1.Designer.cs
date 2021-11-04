@@ -41,13 +41,13 @@ namespace Temperaturas
             this.lblInformacion = new System.Windows.Forms.Label();
             this.pnlDatos = new System.Windows.Forms.Panel();
             this.txtMedidas = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgbHistorial = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.pnlCelsius.SuspendLayout();
             this.pnlKelvin.SuspendLayout();
             this.pnlFahrenheit.SuspendLayout();
             this.pnlDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbHistorial)).BeginInit();
             this.SuspendLayout();
             // 
             // CmbMedidas
@@ -179,20 +179,20 @@ namespace Temperaturas
             this.txtMedidas.Size = new System.Drawing.Size(100, 20);
             this.txtMedidas.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgbHistorial
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(420, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 2;
+            this.dgbHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbHistorial.Location = new System.Drawing.Point(420, 12);
+            this.dgbHistorial.Name = "dgbHistorial";
+            this.dgbHistorial.Size = new System.Drawing.Size(240, 150);
+            this.dgbHistorial.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgbHistorial);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -203,7 +203,7 @@ namespace Temperaturas
             this.pnlFahrenheit.ResumeLayout(false);
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbHistorial)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,7 +222,7 @@ namespace Temperaturas
         private System.Windows.Forms.ComboBox cmbFahrenheit;
         private System.Windows.Forms.ComboBox cmbKelvin;
         private System.Windows.Forms.Label lblInformacion2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgbHistorial;
     }
 }
 

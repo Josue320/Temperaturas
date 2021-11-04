@@ -16,5 +16,30 @@ namespace Temperaturas
         {
             InitializeComponent();
         }
+
+        private void CmbMedidas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (CmbMedidas.SelectedIndex)
+            {
+                case 0:
+                    pnlDatos.Visible = true;
+                    pnlKelvin.Visible = false;
+                    pnlFahrenheit.Visible = false;
+                    pnlCelsius.Visible = true;
+                    break;
+                case 1:
+                    pnlDatos.Visible = true;
+                    pnlKelvin.Visible = false;
+                    pnlFahrenheit.Visible = true;
+                    pnlCelsius.Visible = false;
+                    break;
+                case 2:
+                    pnlDatos.Visible = true;
+                    pnlKelvin.Visible = true;
+                    pnlFahrenheit.Visible = false;
+                    pnlCelsius.Visible = false;
+                    break;
+            }
+        }
     }
 }

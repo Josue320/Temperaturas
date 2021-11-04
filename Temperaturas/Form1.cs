@@ -53,10 +53,16 @@ namespace Temperaturas
                 case 0:
                     Temperatura p = new Temperatura
                     {
-                        Celsius = nudDatos.Value,
+                        Celsius = nudDatos.Value
                     };
+                    obj.Create(p);
                     break;
                 case 1:
+                    Temperatura r = new Temperatura
+                    {
+                        Celsius = nudDatos.Value
+                    };
+                    obj.Create(r);
                     break;
                 default:
                     Ingresar();
@@ -65,8 +71,18 @@ namespace Temperaturas
             switch (cmbFahrenheit.SelectedIndex)
             {
                 case 0:
+                    Temperatura s = new Temperatura
+                    {
+                        Fahrenheit = nudDatos.Value
+                    };
+                    obj.Create(s);
                     break;
                 case 1:
+                    Temperatura t = new Temperatura
+                    {
+                        Fahrenheit = nudDatos.Value
+                    };
+                    obj.Create(t);
                     break;
                 default:
                     Ingresar();
@@ -75,13 +91,24 @@ namespace Temperaturas
             switch (cmbKelvin.SelectedIndex)
             {
                 case 0:
+                    Temperatura u = new Temperatura
+                    {
+                        Kelvin = nudDatos.Value
+                    };
+                    obj.Create(u);
                     break;
                 case 1:
+                    Temperatura v = new Temperatura
+                    {
+                        Kelvin = nudDatos.Value
+                    };
+                    obj.Create(v);
                     break;
                 default:
                     Ingresar();
                     return;
             }
+            dgbHistorial.DataSource = obj.GetAll(a => a.GetType == obj.);
         }
         private void Ingresar()
         {

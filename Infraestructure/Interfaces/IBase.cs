@@ -6,7 +6,7 @@ namespace Infraestructure.Interfaces
 {
     public interface IBase<T>
     {
-        void Create(T t);
+          void Create(T t);
         List<T> GetAll(Predicate<T> predicate);
     }
 }

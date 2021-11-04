@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Dominio.Entities;
+using Infraestructure;
+using Infraestructure.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +15,7 @@ namespace Temperaturas
 {
     public partial class Form1 : Form
     {
+        public BaseRepository obj;
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +51,10 @@ namespace Temperaturas
             switch (cmbCelsius.SelectedIndex)
             {
                 case 0:
+                    Temperatura p = new Temperatura
+                    {
+                        Celsius = nudDatos.Value,
+                    };
                     break;
                 case 1:
                     break;

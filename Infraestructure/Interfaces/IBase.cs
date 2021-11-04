@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Infraestructura.Interfaces
+namespace Infraestructure.Interfaces
 {
     public interface IBase<T>
     {
